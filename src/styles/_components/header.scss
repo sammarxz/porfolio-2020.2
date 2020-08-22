@@ -1,0 +1,18 @@
+.header {
+  color: map-get($colors, "white");
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  top: 0;
+  left: 10vw;
+  right: 10vw;
+  mix-blend-mode: difference;
+  z-index: 10;
+
+  &__info {
+    max-width: 160px;
+  }
+
+  &__contact {
+    grid-area: 1 / 5;
+  }
+}

@@ -3,28 +3,35 @@ module.exports = {
     title: `Sam Marxz - Product Designer and Developer based in Brazil.`,
     description: `Personal portfolio of Sam Marxz. A Product Designer and Web Developer based in Brazil.`,
     author: `@sammarxz`,
+    about: {
+      name: `Sam Marxz`,
+      role: `Produt Designer && Web Developer.`,
+      working: `Currently working as front-end developer @mcontigo.`,
+      location: `Based in Brazil`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `projects`,
+        path: `${__dirname}/data`,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Sam Marxz - Product Designer and Web Developer based in Brazil.`,
+        short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#FFFFFF`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-sass`,

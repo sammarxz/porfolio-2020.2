@@ -1,0 +1,7 @@
+.c {
+  @include generateColors($colors, "color");
+}
+
+.bg {
+  @include generateColors($colors, "background-color");
+}

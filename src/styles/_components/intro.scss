@@ -1,0 +1,69 @@
+.intro {
+  &__top,
+  &__bottom {
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 8;
+
+    &__overlay {
+      background: map-get($colors, "black");
+      position: absolute;
+      height: 100%;
+      width: 100vw;
+      bottom: 0;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+
+      @include media("sm") {
+        width: 33.333vw;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__top {
+    &__overlay {
+      left: 0;
+      right: 0;
+
+      &:nth-child(2) {
+        left: 33.333%;
+      }
+
+      &:nth-child(3) {
+        left: 66.666%;
+      }
+    }
+  }
+
+  &__bottom {
+    bottom: 0;
+
+    &__overlay {
+      right: 0;
+
+      @include media("sm") {
+        right: 66.666%;
+      }
+
+      &:nth-child(2) {
+        right: 33.333%;
+      }
+
+      &:nth-child(3) {
+        right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap');
+
+// Settings
+@import '_settings/mixins.scss';
+@import '_settings/variables.scss';
+
+// Components
+@import '_components/intro.scss';
+@import '_components/header.scss';
+@import '_components/projects.scss';
+
+// Utils
+@import '_utils/colors.scss';
+@import '_utils/text.scss';
+@import '_utils/spacing.scss';
+@import '_utils/helpers.scss';
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  background: map-get($colors, 'white');
+  font-family: $font--primary;
+  visibility: hidden;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  height: 200vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+.viewport {
+  margin: 0 0 0 0;
+  width: 100vw;
+  overflow-x: hidden;
+  position: fixed;
+  will-change: transform;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include media('xs') {
+    padding: 0 32px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+}

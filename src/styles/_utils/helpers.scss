@@ -1,0 +1,47 @@
+.d--flex {
+  display: flex;
+}
+
+.d--block {
+  display: block;
+}
+
+.d--inlineBlock {
+  display: inline-block;
+}
+
+.d--inline {
+  display: inline;
+}
+
+.p--relative {
+  position: relative;
+}
+
+.p--absolute {
+  position: absolute;
+}
+
+.p--fixed {
+  position: fixed;
+}
+
+.jc--spaceBetween {
+  justify-content: space-between;
+}
+
+.jc--center {
+  justify-content: center;
+}
+
+.ai--center {
+  align-items: center;
+}
+
+.fd--column {
+  flex-direction: column;
+}
+
+.o--hidden {
+  overflow: hidden;
+}

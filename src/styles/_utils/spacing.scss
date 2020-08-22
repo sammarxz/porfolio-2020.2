@@ -1,0 +1,12 @@
+.m {
+  @include spacing($spacing-keys, "margin");
+}
+
+.mrl--auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p {
+  @include spacing($spacing-keys, "padding");
+}

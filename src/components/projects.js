@@ -1,23 +1,28 @@
-import React from "react"
-import Image from "gatsby-image"
+import React from 'react'
+import Image from 'gatsby-image'
 
-const Projects = ({ projects }) => {
-  return (
-    <div className="container">
-      <section className="projects">
-        {projects.map(({ node: project }) => {
-          const { title, description, slug, url } = project
-          const imageData = project.image.childImageSharp.fluid
+const Projects = ({ projects, projectsRef }) => (
+  <section className="projects" ref={projectsRef}>
+    {projects.map(({ node: project }) => {
+      const { title, images } = project
 
-          return (
-            <div key={slug} className="projects__project__image">
-              <Image fluid={imageData} alt={title} />
-            </div>
-          )
-        })}
-      </section>
-    </div>
-  )
-}
+      return (
+        <div key={title} className="projects__project">
+          {images.map((image) => {
+            const imageData = image.childImageSharp.fluid
+            return (
+              <Image
+                key={title}
+                fluid={imageData}
+                alt={title}
+                className="projects__project__image mb--big"
+              />
+            )
+          })}
+        </div>
+      )
+    })}
+  </section>
+)
 
 export default Projects

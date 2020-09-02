@@ -1,16 +1,22 @@
-import React from "react"
+import React from 'react'
 
 // Components
-import SmoothScroll from "../components/smoothScroll"
-import Header from "../components/header"
+import SmoothScroll from '../components/smoothScroll'
+import Header from '../components/header'
+import Intro from '../components/intro'
 
 // Styles
-import "../styles/styles.scss"
+import '../styles/styles.scss'
 
-const Default = ({ children }) => (
+const Default = ({ headerRef, children }) => (
   <>
-    <Header />
-    <SmoothScroll>{children}</SmoothScroll>
+    <Header headerRef={headerRef} />
+    <SmoothScroll>
+      <div className="container p--relative">
+        <Intro />
+        {children}
+      </div>
+    </SmoothScroll>
   </>
 )
 

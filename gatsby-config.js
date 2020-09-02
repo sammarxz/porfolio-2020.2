@@ -5,10 +5,10 @@ module.exports = {
     author: `@sammarxz`,
     about: {
       name: `Sam Marxz`,
-      role: `Produt Designer && Web Developer.`,
+      role: `Designer && Web Developer.`,
       working: `Currently working as front-end developer @mcontigo.`,
-      location: `Based in Brazil`,
-    },
+      location: `Based in Brazil`
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,8 +16,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
-        path: `${__dirname}/data`,
-      },
+        path: `${__dirname}/data`
+      }
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -31,12 +31,12 @@ module.exports = {
         background_color: `#FFFFFF`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
-      },
+        icon: `src/images/gatsby-icon.png`
+      }
     },
-    `gatsby-plugin-sass`,
+    `gatsby-plugin-sass`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ]
 }

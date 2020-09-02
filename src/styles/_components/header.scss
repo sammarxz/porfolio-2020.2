@@ -1,11 +1,9 @@
 .header {
-  color: map-get($colors, "white");
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   top: 0;
-  left: 10vw;
-  right: 10vw;
-  mix-blend-mode: difference;
+  left: 8vw;
+  right: 8vw;
   z-index: 10;
 
   &__info {

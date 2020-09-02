@@ -1,7 +1,23 @@
 .c {
-  @include generateColors($colors, "color");
+  &--black {
+    color: map-get($colors, 'black');
+  }
+
+  &--white {
+    color: map-get($colors, 'white');
+  }
+
+  @include generateColors($colors, 'color');
 }
 
 .bg {
-  @include generateColors($colors, "background-color");
+  &--black {
+    background-color: map-get($colors, 'black');
+  }
+
+  &--white {
+    background-color: map-get($colors, 'white');
+  }
+
+  @include generateColors($colors, 'background-color');
 }

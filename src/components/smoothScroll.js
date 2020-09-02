@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { TweenLite, Power4 } from 'gsap'
 
-export default class SmoothScroll extends React.Component {
-  state = {
-    height: window.innerHeight
+export default class SmoothScroll extends Component {
+  constructor() {
+    super()
+    this.state = {
+      height: window.innerHeight
+    }
   }
 
   ro = new ResizeObserver((elements) => {

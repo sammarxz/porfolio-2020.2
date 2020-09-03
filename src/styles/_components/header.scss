@@ -1,6 +1,4 @@
 .header {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
   top: 0;
   left: 8vw;
   right: 8vw;
@@ -10,7 +8,15 @@
     max-width: 160px;
   }
 
-  &__contact {
-    grid-area: 1 / 5;
+  &__title {
+    .is--end {
+      text-align: center;
+      display: block;
+
+      @include media('xs') {
+        text-align: left;
+        display: inline-block;
+      }
+    }
   }
 }

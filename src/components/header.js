@@ -21,35 +21,39 @@ const Header = ({ headerRef }) => {
     name, role, working, location
   } = siteData.site.siteMetadata.about
 
+  const scrollBottom = () => {
+    window.scrollTo(0, document.body.scrollHeight)
+  }
+
   return (
-    <div className="container">
-      <header className="header pt--x-big p--fixed">
-        <h1 className="header__title">
-          <Link ref={headerRef} to="/" className="is--lineAnimation">
-            {name}
-          </Link>
-        </h1>
-        <div className="header__info is--fadeOut">
-          <h2>
-            <span className="d--block mb--medium is--lineAnimation">
-              {role}
-            </span>
-            <span className="d--block mb--medium is--lineAnimation">
-              {working}
-            </span>
-            <span className="d--block mb--medium is--lineAnimation">
-              {location}
-              .
-            </span>
-          </h2>
-        </div>
-        <div className="header__contact">
-          <Link to="#get-in-touch" className="is--lineAnimation">
-            Get in Touch
-          </Link>
-        </div>
-      </header>
-    </div>
+    <header className="header pt--x-big p--fixed d--grid row fd--column">
+      <h1 className="header__title">
+        <Link ref={headerRef} to="/" className="is--lineAnimation">
+          {name}
+        </Link>
+      </h1>
+      <div className="header__info is--fadeOut">
+        <h2>
+          <span className="d--block mb--medium is--lineAnimation">{role}</span>
+          <span className="d--block mb--medium is--lineAnimation">
+            {working}
+          </span>
+          <span className="d--block mb--medium is--lineAnimation">
+            {location}
+            .
+          </span>
+        </h2>
+      </div>
+      <div className="header__contact col--1-5 hide--mobile">
+        <button
+          type="button"
+          onClick={scrollBottom}
+          className="is--lineAnimation"
+        >
+          Get in Touch
+        </button>
+      </div>
+    </header>
   )
 }
 

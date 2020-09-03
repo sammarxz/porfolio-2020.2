@@ -11,12 +11,12 @@ const Projects = ({ projects, projectsRef }) => (
           {images.map((image) => {
             const imageData = image.childImageSharp.fluid
             return (
-              <Image
+              <div
                 key={title}
-                fluid={imageData}
-                alt={title}
-                className="projects__project__image mb--big"
-              />
+                className="projects__project__image mb--big bg--white-10"
+              >
+                <Image fluid={imageData} alt={title} />
+              </div>
             )
           })}
         </div>

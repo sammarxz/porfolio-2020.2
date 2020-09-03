@@ -1,3 +1,11 @@
+.d--grid {
+  display: flex;
+
+  @include media('xs') {
+    display: grid;
+  }
+}
+
 .d--flex {
   display: flex;
 }
@@ -12,6 +20,14 @@
 
 .d--inline {
   display: inline;
+}
+
+.ai--center {
+  align-items: center;
+}
+
+.ai--end {
+  align-items: end;
 }
 
 .p--relative {
@@ -44,4 +60,12 @@
 
 .o--hidden {
   overflow: hidden;
+}
+
+.hide--mobile {
+  display: none;
+
+  @include media('xs') {
+    display: block;
+  }
 }

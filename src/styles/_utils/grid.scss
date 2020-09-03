@@ -1,0 +1,15 @@
+.row {
+  grid-template-columns: 1fr;
+
+  @include media('xs') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media('sm') {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.col--1-5 {
+  grid-area: 1 / 5;
+}

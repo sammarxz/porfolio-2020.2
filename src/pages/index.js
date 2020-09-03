@@ -57,30 +57,40 @@ const IndexPage = () => {
 
     // fadeOut when scroll
     gsap.set('.is--fadeOut', {
-      opacity: 1 - (scrollTop / windowHeight) * 14
+      opacity: 1 - (scrollTop / windowHeight) * 26
     })
 
     const header = headerTitleRef.current
     let current = 1
+    let totalHeight = 1
 
     // check when project enters on screen
     projectsList.forEach((element) => {
       const headerPos = header.getBoundingClientRect()
       const pos = element.getBoundingClientRect()
 
+      totalHeight += pos.height
+
       if (
-        headerPos.top >= pos.top
-        && headerPos.top <= element.getBoundingClientRect().height
+        headerPos.top >= pos.top &&
+        headerPos.top <= element.getBoundingClientRect().height
       ) {
-        header.textContent = `0${current}/0${projectsList.length}`
+        header.textContent = `${current} — ${projectsList.length}`
         current += 1
       } else if (
-        scrollTop
-        < header.parentElement.offsetHeight + window.innerHeight / 3
+        scrollTop <
+        header.parentElement.offsetHeight + window.innerHeight / 3
       ) {
         header.textContent = name
       }
     })
+
+    if (scrollTop > totalHeight + window.innerHeight) {
+      header.classList.add('is--end')
+      header.textContent = 'Hey, thanks for coming this far, you are awesome!✌️'
+    } else {
+      header.classList.remove('is--end')
+    }
   }
 
   useEffect(() => {
@@ -163,7 +173,6 @@ const IndexPage = () => {
     <Default headerRef={headerTitleRef}>
       <SEO title="Home" />
       <Projects projects={projects} projectsRef={projectsRef} />
-      <div style={{ height: '800px' }} />
     </Default>
   )
 }

@@ -8,12 +8,15 @@
 @import '_components/header.scss';
 @import '_components/intro.scss';
 @import '_components/projects.scss';
+@import '_components/footer.scss';
 
 // Utils
+@import '_utils/grid.scss';
 @import '_utils/colors.scss';
 @import '_utils/text.scss';
 @import '_utils/spacing.scss';
 @import '_utils/helpers.scss';
+@import '_utils/links.scss';
 
 html {
   box-sizing: border-box;
@@ -75,6 +78,27 @@ h4,
 h5,
 h6 {
   font-size: 1rem;
+}
+
+button {
+  border: none;
+  color: currentColor;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
 }
 
 .viewport {

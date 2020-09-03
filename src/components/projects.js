@@ -9,7 +9,7 @@ const Projects = ({ projects, projectsRef }) => (
       return (
         <div key={title} className="projects__project">
           {images.map((image) => {
-            const imageData = image.childImageSharp.fluid
+            const imageData = image.asset.fluid
             return (
               <div
                 key={title}

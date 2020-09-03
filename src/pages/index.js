@@ -18,26 +18,18 @@ const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
     {
-      allSite {
-        edges {
-          node {
-            siteMetadata {
-              about {
-                name
-              }
-            }
-          }
-        }
+      sanityAuthor {
+        name
       }
 
-      allProjectsJson {
+      allSanityProject {
         edges {
           node {
             title
             images {
-              childImageSharp {
+              asset {
                 fluid {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbySanityImageFluid
                 }
               }
             }
@@ -47,8 +39,9 @@ const IndexPage = () => {
     }
   `)
 
-  const { name } = data.allSite.edges[0].node.siteMetadata.about
-  const projects = data.allProjectsJson.edges
+  const { name } = data.sanityAuthor
+
+  const projects = data.allSanityProject.edges
   const projectsList = []
 
   const handleScroll = () => {
@@ -171,7 +164,7 @@ const IndexPage = () => {
 
   return (
     <Default headerRef={headerTitleRef}>
-      <SEO title="Home" />
+      <SEO />
       <Projects projects={projects} projectsRef={projectsRef} />
     </Default>
   )

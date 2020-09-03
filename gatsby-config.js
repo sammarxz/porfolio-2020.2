@@ -1,28 +1,14 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Sam Marxz - Product Designer and Developer based in Brazil.',
-    description:
-      'Personal portfolio of Sam Marxz. A Product Designer and Web Developer based in Brazil.',
-    author: '@sammarxz',
-    about: {
-      name: 'Sam Marxz',
-      role: 'Designer && Web Developer.',
-      working: 'Currently working as front-end developer @mcontigo.',
-      location: 'Based in Brazil 🇧🇷'
-    }
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-source-sanity',
       options: {
-        name: 'projects',
-        path: `${__dirname}/data`
+        projectId: 'g2upo3jx',
+        dataset: 'production'
       }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-transformer-json',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -34,10 +20,6 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png'
       }
-    },
-    'gatsby-plugin-sass'
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    }
   ]
 }

@@ -3,23 +3,17 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const Header = ({ headerRef }) => {
   const siteData = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          about {
-            name
-            role
-            working
-            location
-          }
-        }
+    {
+      sanityAuthor {
+        name
+        role
+        working
+        location
       }
     }
   `)
 
-  const {
-    name, role, working, location
-  } = siteData.site.siteMetadata.about
+  const { name, role, working, location } = siteData.sanityAuthor
 
   const scrollBottom = () => {
     window.scrollTo(0, document.body.scrollHeight)
@@ -39,8 +33,7 @@ const Header = ({ headerRef }) => {
             {working}
           </span>
           <span className="d--block mb--medium is--lineAnimation">
-            {location}
-            .
+            {location}.
           </span>
         </h2>
       </div>

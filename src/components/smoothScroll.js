@@ -6,7 +6,7 @@ export default class SmoothScroll extends Component {
   constructor() {
     super()
     this.state = {
-      height: window.innerHeight
+      height: 0
     }
   }
 
@@ -20,6 +20,10 @@ export default class SmoothScroll extends Component {
   })
 
   componentDidMount() {
+    if (typeof window !== `undefined`) {
+      this.setState({ height: window.innerHeight })
+    }
+
     window.addEventListener('scroll', this.onScroll)
     this.ro.observe(this.viewport)
   }

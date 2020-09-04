@@ -50,7 +50,7 @@ const IndexPage = () => {
 
     // fadeOut when scroll
     gsap.set('.is--fadeOut', {
-      opacity: 1 - (scrollTop / windowHeight) * 26
+      opacity: 1 - (scrollTop / windowHeight) * 100
     })
 
     const header = headerTitleRef.current

@@ -27,7 +27,8 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "resize-observer-polyfill": "^1.5.1"
   },
   "keywords": [
     "gatsby"

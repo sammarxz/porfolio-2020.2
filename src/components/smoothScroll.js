@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { TweenLite, Power4 } from 'gsap'
+import ResizeObserver from 'resize-observer-polyfill'
 
 export default class SmoothScroll extends Component {
   constructor() {

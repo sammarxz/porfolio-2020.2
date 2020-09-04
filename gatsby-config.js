@@ -20,6 +20,12 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/icon.png'
       }
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-159090844-1'
+      }
     }
   ]
 }

@@ -6,6 +6,10 @@
     text-align: left;
   }
 
+  @include media('hd') {
+    margin-top: 82vh;
+  }
+
   p {
     margin: 0 auto;
     order: 2;

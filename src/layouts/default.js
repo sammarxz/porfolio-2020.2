@@ -12,23 +12,13 @@ import '../styles/styles.scss'
 const Default = ({ headerRef, children }) => (
   <>
     <Header headerRef={headerRef} />
-    {/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    ) ? (
+    <SmoothScroll>
       <div className="container p--relative">
         <Intro />
         {children}
         <Footer />
       </div>
-    ) : (
-      <SmoothScroll>
-        <div className="container p--relative">
-          <Intro />
-          {children}
-          <Footer />
-        </div>
-      </SmoothScroll>
-    )}
+    </SmoothScroll>
   </>
 )
 

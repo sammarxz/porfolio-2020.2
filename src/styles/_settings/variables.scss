@@ -1,11 +1,11 @@
 // Fonts
-$font--primary: "Fira Sans", sans-serif;
+$font--primary: 'Fira Sans', sans-serif;
 $font--secondary: monospace;
 
 // Colors
 $colors: (
-  "white": #fff,
-  "black": #000,
+  'white': #fff,
+  'black': #000
 );
 
 // Breakpoints
@@ -14,15 +14,16 @@ $breakpoints: (
   sm: 768px,
   md: 992px,
   lg: 1200px,
+  hd: 1919px
 );
 
 // Spacing Keys
 $spacing-keys: (
-  "0": 0,
-  "x-small": 0.3,
-  "small": 1,
-  "normal": 2,
-  "medium": 4,
-  "big": 6,
-  "x-big": 10,
+  '0': 0,
+  'x-small': 0.3,
+  'small': 1,
+  'normal': 2,
+  'medium': 4,
+  'big': 6,
+  'x-big': 10
 );

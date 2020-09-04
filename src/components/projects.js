@@ -8,11 +8,11 @@ const Projects = ({ projects, projectsRef }) => (
 
       return (
         <div key={title} className="projects__project">
-          {images.map((image) => {
+          {images.map((image, i) => {
             const imageData = image.asset.fluid
             return (
               <div
-                key={title}
+                key={title + i}
                 className="projects__project__image mb--big bg--white-10"
               >
                 <Image fluid={imageData} alt={title} />

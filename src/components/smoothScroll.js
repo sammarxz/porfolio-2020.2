@@ -42,7 +42,7 @@ export default class SmoothScroll extends Component {
   render() {
     return (
       <>
-        <div className="scroll-content" ref={(ref) => (this.viewport = ref)}>
+        <div className="viewport" ref={(ref) => (this.viewport = ref)}>
           {this.props.children}
         </div>
         <div

@@ -1,5 +1,4 @@
 import React from 'react'
-import { isMobile } from 'react-device-detect'
 
 // Components
 import SmoothScroll from '../components/smoothScroll'
@@ -10,29 +9,27 @@ import Footer from '../components/footer'
 // Styles
 import '../styles/styles.scss'
 
-const Default = ({ headerRef, children }) => {
-  console.log(isMobile)
-
-  return (
-    <>
-      <Header headerRef={headerRef} />
-      {isMobile ? (
+const Default = ({ headerRef, children }) => (
+  <>
+    <Header headerRef={headerRef} />
+    {/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) ? (
+      <div className="container p--relative">
+        <Intro />
+        {children}
+        <Footer />
+      </div>
+    ) : (
+      <SmoothScroll>
         <div className="container p--relative">
           <Intro />
           {children}
           <Footer />
         </div>
-      ) : (
-        <SmoothScroll>
-          <div className="container p--relative">
-            <Intro />
-            {children}
-            <Footer />
-          </div>
-        </SmoothScroll>
-      )}
-    </>
-  )
-}
+      </SmoothScroll>
+    )}
+  </>
+)
 
 export default Default

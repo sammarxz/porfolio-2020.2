@@ -11,17 +11,29 @@ export default {
     {
       name: 'role',
       title: 'Role',
-      type: 'string',
+      type: 'string'
     },
     {
       name: 'working',
       title: 'Working',
-      type: 'string',
+      type: 'string'
     },
     {
       name: 'location',
       title: 'Location',
-      type: 'string',
+      type: 'string'
+    },
+    {
+      name: 'social',
+      title: 'Social',
+      type: 'array',
+      of: [
+        {
+          name: 'social',
+          title: 'Social Media',
+          type: 'social'
+        }
+      ]
     }
   ]
 }

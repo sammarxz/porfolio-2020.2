@@ -1,4 +1,5 @@
 import React from 'react'
+import { isMobile } from 'react-device-detect'
 
 // Components
 import SmoothScroll from '../components/smoothScroll'
@@ -12,13 +13,21 @@ import '../styles/styles.scss'
 const Default = ({ headerRef, children }) => (
   <>
     <Header headerRef={headerRef} />
-    <SmoothScroll>
+    {isMobile ? (
       <div className="container p--relative">
         <Intro />
         {children}
         <Footer />
       </div>
-    </SmoothScroll>
+    ) : (
+      <SmoothScroll>
+        <div className="container p--relative">
+          <Intro />
+          {children}
+          <Footer />
+        </div>
+      </SmoothScroll>
+    )}
   </>
 )
 

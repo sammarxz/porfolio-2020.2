@@ -78,7 +78,7 @@ const IndexPage = () => {
       }
     })
 
-    if (scrollTop > totalHeight + window.innerHeight) {
+    if (scrollTop > totalHeight + window.innerHeight * 3.5) {
       header.classList.add('is--end')
       header.textContent = 'Hey, thanks for coming this far, you are awesome!✌️'
     } else {

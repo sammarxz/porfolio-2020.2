@@ -1,5 +1,9 @@
 .projects {
-  margin-top: 84vh;
+  margin-top: 73vh;
+
+  @include media('xs') {
+    margin-top: 84vh;
+  }
 
   &__project__image {
     padding: 8vw;

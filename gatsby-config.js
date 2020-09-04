@@ -18,7 +18,7 @@ module.exports = {
         background_color: '#FFFFFF',
         theme_color: '#000000',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png'
+        icon: 'src/images/icon.png'
       }
     }
   ]

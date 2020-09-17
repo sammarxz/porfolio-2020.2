@@ -33,7 +33,7 @@ const Header = ({ headerRef }) => {
             {working}
           </span>
           <span className="d--block mb--medium is--lineAnimation">
-            {location}.
+            {location}
           </span>
         </h2>
       </div>
